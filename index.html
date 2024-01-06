@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html>
+    <title>Landing Page</title>
+        
+    <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: black;
+    }
+    header {
+      background-color:black;
+      color: #fff;
+      /* padding: 10px; */
+      text-align: center;
+      height: 70px;
+    }
+    #logo {
+      float: left;
+      margin-right: 10px;
+    }
+    #logo img {
+      height: 65px;
+      width: 605x; /* Adjust the height as needed */
+    }
+    nav {
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      padding: 10px;
+      background-color: black;
+    }
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #777;
+    }
+    .popup1 {
+      position: relative;
+      display: inline-block;
+    }
+    .popup2 {
+      position: relative;
+      display: inline-block;
+    }
+    .popup-content1 {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      z-index: 1;
+      width: 130px;
+      text-align: left;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    }
+    .popup-content2 {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      z-index: 1;
+      width: 250px;
+      text-align: left;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    }
+    .popup1:hover .popup-content1 {
+      display: block;
+    }
+    .popup2:hover .popup-content2 {
+      display: block;
+    }
+    .dropdown{
+            background-color:black;
+            border-radius:150px;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            margin: 10px; 
+            font-weight: lighter;
+            border-color: white;
+    }
+/* ................................ */
+.div1{
+    background-image: url('https://img.freepik.com/free-vector/abstract-sale-busioness-background-banner-design-multipurpose_1340-19319.jpg?w=996&t=st=1704209577~exp=1704210177~hmac=bc341e6af83131f4be4b81013b2ef013e52e385086fa82edd0c44f27ea6bfe92');
+    width: 100%;
+    height: 600PX;    
+}
+.p1{
+    text-align: left;
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+}
+.p2{
+    text-align: left;
+    font-size: 40px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+    color: white;
+}
+.p3{
+    font-size: 20px;
+    color: rgb(212, 185, 185);
+}
+.button1{
+      background-color: rgb(112, 122, 216);
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 150px;
+      height: 50px;
+      color: black;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+} 
+/* ............................ */
+    #image-scroller {
+      width: 100%;
+      overflow: hidden;
+    }
+    #image-container {
+      display: flex;
+      transition: transform 1s ease-in-out;
+      animation: scrollImages 10s linear infinite;
+    }
+    #scroll-image1 {
+      width: 100%;
+      height: auto;
+    }
+ /* ............................ */
+ .paragraph-container {
+    font-size: 40px;
+      display: flex;
+      align-items: center;
+    }
+    .paragraph-with-line {
+        color: white;
+        text-align: center;
+      position: relative;
+      padding-right: 20px; /* Adjust as needed */
+      line-height: 1.5;
+    }
+    .paragraph-with-line::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 2px; /* Adjust as needed */
+      height: 100%;
+      background-color: #333; /* Adjust the line color */
+    }
+    .side-by-side-paragraphs {
+        color: rgb(224, 208, 208);
+        font-size: 15px;
+      flex-grow: 1;
+      padding-left: 20px; /* Adjust as needed */
+      line-height: 1.5;
+    }   
+ /* ............................ */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+    td {
+      padding: 20px;
+    }
+    .round-image {
+      max-width: 25pc;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 2%;
+    }
+    /* ................................... */
+
+    .image-container3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Optional: Set a height for the container to center vertically */
+        }
+        /* Image styling */
+        .image-box2 img {
+            width: 100%; /* Make the image fill the container */
+            height: auto;
+            display: block;
+            border-radius: 8px; /* Optional: Add rounded corners to the images */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional: Box shadow effect for images */
+        }
+        .image-box2{
+          height: 10pc;
+          width: 10pc;
+        }
+
+    /* .............................. */
+        .div4{
+          background-image: url('https://img.freepik.com/free-vector/abstract-red-light-lines-pipe-speed-zoom-black-background-technology_1142-9381.jpg?w=740&t=st=1704296476~exp=1704297076~hmac=1d82f038dede35f98196683b02d412ff54fe0fcb5b57f6f7436679db76df351b');
+        }
+        .image-box1 {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow effect */
+            border: 1px solid #ccc; /* Optional: Border for the container */
+            border-radius: 8px; /* Optional: Add rounded corners to the container */
+            margin: 10px; /* Optional: Add margin around each box */
+            overflow: hidden; /* Optional: Ensure the box doesn't overflow with shadow */
+            padding: 20px;
+        }
+        .image-box1 img {
+            width: 100%; /* Make the image fill the container */
+            height: auto;
+            display: block;
+            border-radius: 8px; /* Optional: Add rounded corners to the images */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional: Box shadow effect for images */
+        }
+        .image-container2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Optional: Set a height for the container to center vertically */
+        }
+
+
+/* ............................ */
+    .container {
+      display: flex;
+      background-image: url('https://img.freepik.com/free-photo/close-up-film-texture-details_23-2149368371.jpg?w=740&t=st=1704297706~exp=1704298306~hmac=5b17a9caaab02ec74de68811bdc15940d710dffbdc1d6cc5bd59a233b74554d7');
+      width:100%; 
+      height: 570px;
+    }
+    .box {
+      flex: 1;
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin: 10px;
+    }
+    .button2{
+      background-color: rgb(13, 21, 87);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 15px;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 200px;
+      height: 50px;
+      color: rgb(240, 234, 234);
+}
+/* ............................ */
+    
+    .button3{
+      background-color: rgb(13, 21, 87);
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 15px; 
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 200px;
+      height: 50px;
+      color: rgb(240, 234, 234);
+      }
+/* ............................ */
+          .div2{
+            background-image: url('https://img.freepik.com/premium-psd/abstract-particles-light-sparkles-background_457716-415.jpg?w=740');
+            width: 100%;
+            height: 600px;
+          }
+          .container1{
+            background-color: #050505;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-left: 30pc;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        .button4 {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+    /* ............................ */
+     
+    .scroller-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory; 
+    }
+    .scroller-item {
+      flex: 0 0 auto;
+      width: 50vw;
+      scroll-snap-align: start;
+    }
+    .image {
+      width: 40pc; height: 30pc;
+      display: block;
+    }
+    .content {
+      text-align: left;
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      width: 600px; height: 20px;
+      color: white;
+      padding: 20px; 
+      background-color: #353333;
+    }  
+/* ............................ */
+
+
+footer {
+      background-image:  url( 'https://img.freepik.com/premium-vector/technology-background-design-with-neon-chip-shape-blue-futuristic-technology-background-vector_676228-180.jpg?w=996');
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-section {
+      max-width: 30%;
+    }
+
+    .footer-section h3 {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #fff;
+    }
+
+    .footer-section p {
+      margin: 0;
+    }
+
+    .footer-section ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .social-icons i {
+      vertical-align: middle;
+    }
+
+  </style>
+
+<!--  ............................  -->
+
+
+
+        <body style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+            <header>
+                <div id="logo">
+                    <img src="https://img.freepik.com/premium-vector/abstract-emblem-concept-logo-logotype-ecology-nature-environment-element_94155-102.jpg" alt="Logo">
+                </div>
+                       
+              <nav>
+                <a href="https://influencerlabs.in/">Home</a>
+                <a href="https://influencerlabs.in/">About us</a>
+                
+                </a>
+                <a href="https://influencerlabs.in/" class="popup1">Services
+                  <div class="popup-content1">
+                    Static website<br>
+                    Started website<br>
+                    Dynamic website<br>
+                    ECommerce website
+                  </div>
+                </a>
+
+                  <a href="https://influencerlabs.in/">Packages</a>
+                </a>
+                <a href="#" class="popup2">Contact
+                  <div class="popup-content2">
+                    Email: influencerlabs@example.com<br>
+                    Phone: +91 9988776655
+                  </div>
+                </a>
+              </nav>
+
+            </header>
+            
+            <div class="div1">
+                <br><br><br><br>
+                <p class="p1">&nbsp;&nbsp;&nbsp;&nbsp; CODE CRAFT</p> 
+                <br>
+                <P class="p2"> GET BEST QUALITY WEBSITE <br>  @ JUST ₹7800 IN 12 HOURS</P>
+                <p class="p3">&nbsp;&nbsp; Enhance Your Digital Presence With <br>&nbsp;&nbsp; The Professional Website Designing <br>&nbsp;&nbsp; & Development Company</p>
+                <br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://influencerlabs.in/"><button class="button1"><b>Contact Us</b></button></a>
+            </div>
+<!--................................-->
+<br><br>
+<div class="image-scroller">
+    <div class="image-container"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="https://www.drivetrafficmedia.com/wp-content/uploads/2021/09/bing.png" alt="" class="scroll-image1" style="height:70px;width:150px;"> 
+    <img src="https://www.drivetrafficmedia.com/wp-content/uploads/2021/09/facebook.png" alt="" class="scroll-image1" style="height:70px;width:180px;">
+    <img src="https://www.drivetrafficmedia.com/wp-content/uploads/2021/09/google.png" alt="" class="scroll-image1" style="height:70px;width:180px;">
+    <img src="https://www.drivetrafficmedia.com/wp-content/uploads/2021/09/yahoo.png" alt="" class="scroll-image1" style="height:70px;width:180px;">
+    <img src="https://www.drivetrafficmedia.com/wp-content/uploads/2021/09/yelp.png" alt="" class="scroll-image1" style="height:70px;width:180px;">
+    </div>
+</div>
+<!--................................-->
+<br><br><br><br>
+<div class="paragraph-container">
+    <div class="paragraph-with-line">
+      <p> &nbsp;&nbsp; LET US TAKE THE TECHNICAL WEIGHT <br> OFF  YOUR SHOULDERS</p>
+    </div>
+    <p class="side-by-side-paragraphs">
+      &nbsp;&nbsp;We offer full-cycle technology solutions that streamline <br>&nbsp;&nbsp; your digital transformation journey. With cutting-edge <br> &nbsp;&nbsp; technical expertise, INT. simplifies complex business challenges <br>&nbsp;&nbsp; with innovative solutions for 100+ fastest-growing enterprises.</p>
+  </div>
+<!--................................-->
+<br><br><br><br><br><br>
+
+  <table>
+    <tr>
+      <td><img class="round-image" src="https://www.drivetrafficmedia.com/wp-content/uploads/2022/02/search-engine-optimization-home.jpg" alt="Image 2"></td>
+      <td><img class="round-image" src="https://www.drivetrafficmedia.com/wp-content/uploads/2022/07/web-design-home.jpg" alt="Image 3"></td>
+      <td><img class="round-image" src="https://www.drivetrafficmedia.com/wp-content/uploads/2022/07/social-marketing-home.jpg" alt="Image 4"></td>
+    </tr>
+    <tr>
+      <td style="font-size: 23px; color: white;"><b>Static website</b></td>
+      <td style="font-size: 23px; color: white;"><b>Dynamic website</b></td>
+      <td style="font-size: 23px; color: white;"><b>Ecommerce website</b></td>
+    </tr>
+    <!-- <tr>
+      <td style="font-size: 18px; color: azure; width: 300px; line-height: 1.5;">Search engine marketing is ever-changing, but we'll get your company noticed for Google, Bing, and Yahoo search results. We follow Google’s best-recommended practices for content writing and we post on the highest page ranking social media sites in the world to get you more business.</td>
+      <td style="font-size: 18px; color: azure; width: 300px; line-height: 1.5;">In the last 8 years, we logged over 20,000 hours building exceptional sites for businesses in the Orange County and Los Angeles area. Our sites not only look sharp, but they are marketing savvy and lightning-fast. We administer Orange County SEO for a flawless performance on mobile and desktop devices.</td>
+      <td style="font-size: 18px; color: azure; width: 300px; line-height: 1.5;">Social media marketing has become a must-have tool for businesses to build and expand their brand. Drive Traffic Media can help you boost your audience and elevate your brand through Social Media using Facebook, Twitter, Google+, Pinterest, Instagram, and LinkedIn. Let’s get social!</td>
+    </tr> -->
+
+  </table>
+
+  <!--................................-->
+  
+    <div class="image-container3">
+
+  <h1 style="color: white;text-align: center;">Why Choose Us  
+    <p style="color: white;text-align: center;font-size:40px;">Amazing Core <br> Features</p>  </h1> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+
+      <div class="image-box2">
+          <img src="https://gladiasconsulting.com/wp-content/uploads/2023/02/responsive-design-150x150.png" alt="Image 1">
+          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+          <p style="color: white; text-align: center;">Responsive <br> Design</p>
+      </div>
+
+      <div class="image-box2">
+          <img src="https://gladiasconsulting.com/wp-content/uploads/2023/02/subscription-150x150.png" alt="Image 2">
+          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+          <p style="color: white; text-align: center;">Competitive <br> Price</p>
+      </div>
+
+      <div class="image-box2">
+          <img src="https://gladiasconsulting.com/wp-content/uploads/2023/02/online-support-150x150.png" alt="Image 3">
+          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+          <p style="color: white; text-align: center;">Best <br> Professionals</p>
+      </div>
+
+      <div class="image-box2">
+          <img src="https://gladiasconsulting.com/wp-content/uploads/2023/02/search-engine-optimization-150x150.png" alt="">
+          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+          <p style="color: white; text-align: center;">SEO Friendly <br> Website</p>
+      </div>
+
+      <div class="image-box2">
+          <img src="https://gladiasconsulting.com/wp-content/uploads/2023/02/software-developer-150x150.png" alt="">
+          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+          <p style="color: white; text-align: center;">Powerful <br> Customization</p>
+      </div>
+  </div>
+
+  
+    <div  style=" border-top: 2px solid rgb(233, 205, 152);"> </div>
+
+<br><br>
+<!-- ..................................... -->
+<div class="div4">
+        <h2 style="color: white; text-align: center;">Our Work Portfolio</h2> 
+ 
+<div class="image-container2">
+   <div class="image-box1">
+        <img src="https://gladiasconsulting.com/wp-content/uploads/2023/02/Coding-Design.png" alt="Image 1">
+                  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+        <p style="color: white; text-align: center;">Dynamic Website</p>
+                </div>
+      <div  class="image-box1">    
+        <img src="https://gladiasconsulting.com/wp-content/uploads/2023/02/Modern_3d_illustration_of_Online_Shopping.jpg" alt="Image 2">
+                  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+       <p style="color: white; text-align: center;">Ecommerce Website</p>
+       </div>
+     <div  class="image-box1">   
+        <img src="https://gladiasconsulting.com/wp-content/uploads/elementor/thumbs/mobile-app-development-pc2mr6pjh58xhkh3kv411sv7hl1xseg1ijp0u4kxyk.png" alt="Image 3">
+                  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        <p style="color: white; text-align: center;">Mobile App Development</p>
+      </div>
+  </div>
+
+  <div class="image-container2">
+   <div class="image-box1">
+        <img src="https://gladiasconsulting.com/wp-content/uploads/elementor/thumbs/Team-Brainstorming-q1ibdoeumecmd017df3bh06vbr87mzcuxbtulvdsks.png" alt="Image 1">
+                  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+        <p style="color: white; text-align: center;">Web App Development</p>
+                </div>
+      <div  class="image-box1">    
+        <img src="https://gladiasconsulting.com/wp-content/uploads/2023/02/4421964.jpg" alt="Image 2">
+                  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+       <p style="color: white; text-align: center;">Full Stack Development</p>
+      </div>
+     <div  class="image-box1">   
+        <img src="https://gladiasconsulting.com/wp-content/uploads/2023/02/wd_04.jpg" alt="Image 3">
+                  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        <p style="color: white; text-align: center;">React js Development</p>
+      </div>
+  </div>
+</div>
+  
+  
+<!--................................-->
+<br><br>
+
+  
+
+     <div>
+      <h2 style="color: white; text-align: left;">&nbsp;&nbsp;&nbsp;Reviews</h2>
+        <div class="container">
+          
+            <div class="box">
+                <h3 style="color: white;text-align:left;">Exceptional website</h3> <br>
+                <p style="color: white;text-align:left; line-height:1.5;font-size: 18px;">"I'm extremely impressed with the exceptional website Adflaunt designed for my business. Their team's creativity, professionalism, and attention to detail truly set them apart. From the initial concept to the final launch, Adflaunt exceeded my expectations. I'm thrilled with the results and highly recommend their services to anyone in need of a top-notch website."</p>
+                <br>
+                <h4 style="color: white;">Vishnu  </h4> <p style="color: white;">Founder& CEO </p> 
+                <img src="https://www.drivetrafficmedia.com/wp-content/uploads/2021/08/home-four-star.png" alt=""> <br>
+                
+                <!-- <a href="https://influencerlabs.in/"><button class="button2"><b>Check All Our Services</b></button></a> -->
+            
+              </div>
+            <div class="box"> 
+                <h3 style="color: white;text-align:left;">Highly recommended!</h3> <br>
+                <p style="color: white;text-align:left; line-height:1.5;font-size: 18px;">"Adflaunt is a game-changer! They transformed our online presence with a stunning website that perfectly represents our brand. The team's expertise and commitment to delivering excellence is truly commendable. Thanks to Adflaunt, we've seen a significant increase in our online engagement and conversions. Highly recommended!"</p> 
+                <br>
+                <h4 style="color: white;">Ravi Kumar  </h4> <p style="color: white;">Marketing Head </p> 
+                <img style="width: 80px;height: 15px;" src="https://www.pinclipart.com/picdir/big/347-3473608_1920-x-500-26-transparent-4-star-rating.png" alt=""> <br>
+            </div>
+                <!-- <h3 style="color: white;text-align:left;">Brand Strategy</h3>
+                <p style="color: white;text-align:left; line-height:1.5;font-size: 18px;">What does your brand say about your business? Are you targeting your ideal audience? Our brand strategy services are designed specifically for middle-sized businesses to help you reach your goal.</p>
+             -->
+            <div class="box"> 
+                <h3 style="color: white;text-align:left;">Within Budget</h3> <br>
+                <p style="color: white;text-align:left; line-height:1.5; font-size: 18px;">"Working with Adflaunt has been a pleasure from start to finish. Their ability to capture our vision and translate it into an attractive, user-friendly website was outstanding. The communication was seamless, and they delivered on time and within budget. I can't thank them enough for helping us elevate our online identity."</p> 
+                <br>
+                <h4 style="color: white;text-align:left;">Tusha Reddy</h4> <p style="color: white;">Content Creator</p>
+                <img style="width: 80px;height: 15px;" src="https://www.pinclipart.com/picdir/big/347-3473608_1920-x-500-26-transparent-4-star-rating.png" alt=""> <br>
+            </div>
+        </div>
+    </div>
+   <!--................................-->
+   <br><br>
+
+
+   <div style="text-align: center;">
+    <br><br><br><br>
+      <!-- <h1 style="color: white; text-align: center;">Building Websites</h1><br>
+      <a href="https://influencerlabs.in/"> <button class="button3">View All Portfolio</button><br> </a> -->
+      <h2 style="color: white; text-align: center;">Our Work Portfolio</h2> <br><br>
+    
+      <img style="width: 20pc;height: 30pc;border-radius: 4px;" src="https://www.drivetrafficmedia.com/wp-content/uploads/2021/10/exceleye-655x1024.png" alt=""> &nbsp&nbsp 
+      <img style="width: 20pc;height: 30pc;border-radius: 4px;" src="https://www.drivetrafficmedia.com/wp-content/uploads/2022/02/dtc-655x1024.png" alt=""> &nbsp&nbsp
+      <img style="width: 20pc;height: 30pc;border-radius: 4px;" src="https://www.drivetrafficmedia.com/wp-content/uploads/2022/03/act-655x1024.png" alt=""> &nbsp&nbsp
+      <img style="width: 20pc;height: 30pc;border-radius: 4px;" src="https://www.drivetrafficmedia.com/wp-content/uploads/2021/10/pinkfirediamonds-655x1024.png" alt=""> &nbsp&nbsp
+  
+  </div>
+    <!--................................-->
+    <br><br><br><br>
+
+  <div class="div2">
+    <table>
+      <tr>
+        <td style="color: white; text-align: center;width: 30%;"><h1>Who We Are</h1> </td>  
+      
+        <td><p style="color: white; text-align: left;">Drive Traffic Media is a full-service digital marketing agency with offices in Irvine and Santa Monica, California. We create traffic for our clients through Organic Marketing, PPC Marketing, Social Media Marketing, Social Media Management, Website Design, Video Production, and Video Marketing. Our team is dedicated to finding a marketing strategy that will fit your budget and generate the best results to encourage sales for your business. Let's start driving traffic to your website today!</p></td>
+        <br>
+        <td><h4 style="color: white; text-align: left;">Contact Number  9988776655 </h4></td>
+      </tr>
+    </table>
+    <br><br>
+
+    <div class="container1">
+      <form>
+          <label for="name">Name:</label> &nbsp;&nbsp;&nbsp;
+          <input type="text" id="name" name="name" required><br><br>
+
+          <label for="email">Email:</label> &nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="email" id="email" name="email" required><br><br>
+
+          <label for="interests">Interests:</label>
+          <input type="text" id="interests" name="interests" required><br><br>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea><br>
+
+          <button class="button4" type="submit">Send</button>
+      </form>
+    </div>
+
+  </div>
+
+    <!--................................-->
+
+
+        <br><br><br>
+
+
+      <div style=" border-top: 2px solid rgb(233, 205, 152);">
+
+        <h1 style="color: white;text-align: center;">Latest News</h1>
+        <p style="color: white; text-align: center;">We love to share free tips about SEO and Website Design on our blog. <br> So be sure to subscribe and read the latest news!</p>
+      </div>
+
+<br><br><br>
+
+
+      <div class="scroller-container">
+        <div class="scroller-item">
+          <img class="image"  src="https://www.drivetrafficmedia.com/wp-content/uploads/2023/12/SEO-Orange-County-Strategies-for-Enhanced-Customer-Retention-1200-x-800-px.jpg" alt="Image 1">
+          <div class="content">
+            <p>Improving Customer Retention For Your Website</p>
+          </div>
+        </div>
+       
+        <div class="scroller-item">
+          <img class="image" src="https://www.drivetrafficmedia.com/wp-content/uploads/2023/12/What-are-the-benefits-of-tangential-SEO-for-lawyers-1200-x-800-px.jpg" alt="Image 2">
+          <div class="content">
+            <p>Guide To Tangential Code Craft For Your Law Website</p>
+          </div>
+        </div>
+      
+        <div class="scroller-item">
+          <img class="image" src="https://www.drivetrafficmedia.com/wp-content/uploads/2023/10/write-alt-text-properly-and-help-your-irvine-seo-1200-x-800-px.jpg" alt="Image 2">
+          <div class="content">
+            <p>15 Tips For Writing The Best Alt Text</p>
+          </div>
+        </div>
+        <div class="scroller-item">
+          <img class="image" src="https://www.drivetrafficmedia.com/wp-content/uploads/2023/10/guide-in-picking-the-images-for-your-web-design-orange-county-facebook-1200-x-800-px.jpg" alt="Image 2">
+          <div class="content">
+            <p>How To Choose The Best Images For Your Website</p>
+          </div>
+        </div>
+       
+      </div>
+
+      <br><br><br>
+      <!--................................-->
+        <br><br><br>
+  
+    <div class="div3"></div>     
+        
+    <footer>
+
+      
+          <div class="logo-section">
+            <img src="company-logo.png" alt="Company Logo">
+            <!-- <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Code Craft</h2> -->
+          </div>
+      
+          <div class="company-details">
+            <h3 class="section-title">Quice Links</h3>
+            <a href="https://influencerlabs.in/"><p style="color: white;">Home</p></a>
+            <a href="https://influencerlabs.in/"><p style="color: white;">About Us</p></a>
+            <a href="https://influencerlabs.in/"><p style="color: white;">Services</p></a>
+            <a href="https://influencerlabs.in/"><p style="color: white;">Reviews</p></a>
+            <a href=""><p style="color: white;">Blog</p></a>
+          </div>
+      
+          <div class="services">
+            <h3 class="section-title">Our Services</h3>
+            <ul>
+              <li>	Search Engine Optimization</li>
+              <li>Social Media Marketing</li>
+              <li>	Web Design</li>
+              <li>Copywriting Creation</li>
+              <li>Pay-Per-Click Advertising</li>
+            </ul>
+          </div>
+      
+          <div class="social-icons">
+            <h3 class="section-title">Connect With Us</h3>
+            <p style="color: white;">influencerlabs@gmail.com</p>
+            <p style="color: white;">Banglore,Karnataka,India</p>
+            <a href="https://influencerlabs.in/" target="_blank"><img style="width: 30px;height: 30px;" src="http://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="instagram"></a>
+            <a href="https://influencerlabs.in/" target="_blank"><img style="width: 30px;height: 30px;" src="https://www.pngkey.com/png/full/2-27646_twitter-logo-png-transparent-background-logo-twitter-png.png" alt="Twitter"></a>
+            <a href="https://influencerlabs.in/" target="_blank"><img style="width: 30px;height: 30px;" src="http://clipart-library.com/new_gallery/377-3776210_facebook-logo-vector-logovectornet-logo-facebook-2019-png.png" alt="facebook"></a>
+          
+          </div>
+      
+        
+        </footer>
+
+        <div style=" border-top: 2px solid rgb(233, 205, 152);"></div>
+        <br><br><br><br><br>
+      
+          
+    </body>
+
+</html>
